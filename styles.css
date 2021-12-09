@@ -1,1 +1,4 @@
 /*Maak hier jouw CSS!*/
+.grid-container{
+    grid-template-rows: 4;
+}
