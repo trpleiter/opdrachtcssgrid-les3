@@ -11,19 +11,21 @@
 .grid-container {
     background-color: rgba(255, 166, 0, 0.24);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 240px 100px auto 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
     grid-template-areas:
-            "a c c"
-            "b c c"
-            "b e d"
-            "b e ."
-            "f f f";
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+            "."
+            "f";
     grid-gap: 16px;
     padding: 16px;
 }
 
-.grid-item{
+.grid-item {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -58,4 +60,18 @@
 #grid-footer {
     background-color: var(--backgroundcolorgrid);
     grid-area: f;
+}
+
+@media screen and (min-width: 576px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 240px 100px auto 50px;
+        grid-template-areas:
+            "a c c"
+            "b c c"
+            "b e d"
+            "b e ."
+            "f f f";
+    }
+
 }
