@@ -1,4 +1,61 @@
 /*Maak hier jouw CSS!*/
-.grid-container{
-    grid-template-rows: 4;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --backgroundcolorgrid: rgba(175, 37, 0, 0.73);
+}
+
+.grid-container {
+    background-color: rgba(255, 166, 0, 0.24);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 240px 100px auto 50px;
+    grid-template-areas:
+            "a c c"
+            "b c c"
+            "b e d"
+            "b e ."
+            "f f f";
+    grid-gap: 16px;
+    padding: 16px;
+}
+
+.grid-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-header {
+    background-color: var(--backgroundcolorgrid);
+    grid-area: a;
+}
+
+#grid-main {
+    background-color: var(--backgroundcolorgrid);
+    grid-area: b;
+}
+
+#grid-aside1 {
+    background-color: var(--backgroundcolorgrid);
+    grid-area: c;
+}
+
+#grid-aside2 {
+    background-color: var(--backgroundcolorgrid);
+    grid-area: d;
+}
+
+#grid-aside3 {
+    background-color: var(--backgroundcolorgrid);
+    grid-area: e;
+}
+
+#grid-footer {
+    background-color: var(--backgroundcolorgrid);
+    grid-area: f;
 }
